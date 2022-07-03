@@ -37,7 +37,7 @@
 
   # Select internationalisation properties.
   i18n = {
-    consoleKeyMap = colemak;
+    consoleKeyMap = us;
     defaultLocale = "en_GB.UTF-8";
   };
 
