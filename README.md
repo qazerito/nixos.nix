@@ -2,6 +2,6 @@
 
 version numbers 
 
-v1.0.0 - new desktop, new window manager, new rice etc \
-v0.1.0 - change in packages, services etc \
-v0.0.1 - bug fix, typo fix etc 
+v1.0.0 - major changes, rewrites \
+v0.1.0 - packages, services \
+v0.0.1 - bugs, typos
