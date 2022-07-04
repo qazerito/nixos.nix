@@ -27,4 +27,4 @@ Features Not Yet Added:
 
 
 
-This repository follows Semantic Versioning 2.0.0 for version numbers
+This repository follows **Semantic Versioning 2.0.0** for version numbers
