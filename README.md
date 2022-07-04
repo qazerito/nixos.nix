@@ -1,7 +1,10 @@
 # NixOS-Configuration
 
-version numbers 
+My personal nix-os configuration for my x86_64 AMD laptop.
 
-v1.0.0 - major changes, rewrites \
-v0.1.0 - packages, services \
-v0.0.1 - bugs, typos
+Features Added:
+- created flake.nix
+- created configuration.nix
+- created hardware-configuration.nix (installs based on partition labels)
+Features Not Yet Added:
+- home-manager to move specific app configurations into their corresponding folders
