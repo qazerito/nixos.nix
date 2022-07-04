@@ -22,6 +22,10 @@
       "exfat"
     ];
   };
+  
+###### SYSTEM STATE ######
+  
+system.stateVersion = "22.11";
 
 ###### KEYBOARD LAYOUT ######
 
