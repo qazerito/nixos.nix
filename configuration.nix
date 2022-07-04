@@ -21,10 +21,6 @@
     ];
   };
 
-  swapDevices = [
-    { device = "/swapfile"; size = 32768; }
-  ];
-
   networking = {
     firewall = {
       enable = false;
@@ -37,7 +33,7 @@
 
   # Select internationalisation properties.
   i18n = {
-    consoleKeyMap = us;
+    consoleKeyMap = "us";
     defaultLocale = "en_GB.UTF-8";
   };
 
@@ -58,7 +54,7 @@
       xkbOptions = "compose:caps";
       xkbVariant = "colemak";
 
-      synaptics.enable = true;
+      synaptics.enable = false;
 
  ###### DESKTOP ENVIRONMENT ######
 
@@ -77,12 +73,13 @@
 
  ###### USERS ######
 
-  users.extraUsers.alex = {
+  users.users.alex = {
     createHome = true;
     home = "/home/alex";
     description = " ";
     extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
     useDefaultShell = true;
+    isNormalUser = true;
   };
 
   nixpkgs.system = "x86_64-linux";
@@ -109,7 +106,6 @@
       mpv
       mupdf
       networkmanager
-      nix-repl
       p7zip
       pavucontrol
       pinentry
@@ -119,8 +115,6 @@
       unzip
       wget
       alacritty
-      xlibs.xsetroot
-      xsel
       zip
     ];
 
