@@ -149,8 +149,5 @@
     binaryCaches = [
       "http://cache.nixos.org"
     ];
-
-    gc.automatic = false;
-    maxJobs = pkgs.stdenv.lib.mkForce 6;
   };
 }
