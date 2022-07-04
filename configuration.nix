@@ -6,6 +6,8 @@
       ./hardware-configuration.nix
     ];
 
+###### BOOT ######
+
   boot = {
     blacklistedKernelModules = [ "snd_pcsp" ];
     kernelPackages = pkgs.linuxPackages_latest;
@@ -21,6 +23,10 @@
     ];
   };
 
+###### KEYBOARD LAYOUT ######
+
+  consoleKeyMap = "us";
+
   networking = {
     firewall = {
       enable = false;
@@ -33,7 +39,6 @@
 
   # Select internationalisation properties.
   i18n = {
-    consoleKeyMap = "us";
     defaultLocale = "en_GB.UTF-8";
   };
 
@@ -41,6 +46,8 @@
     enable = true;
     package = pkgs.pulseaudioFull;
   };
+
+###### SERVICES ######
 
   services = {
 
@@ -59,7 +66,7 @@
  ###### DESKTOP ENVIRONMENT ######
 
       desktopManager.gnome.enable = true;
-      desktopManager.default = "gnome";
+      displayManager.defaultSession = "gnome";
 
       displayManager.gdm = {
         enable = true;
@@ -118,11 +125,11 @@
       zip
     ];
 
- ###### FONTS ######
+ ###### FONTS######
 
   fonts = {
     fontconfig.enable = true;
-    enableFontDir = true;
+    fontDir.enable = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       corefonts
